@@ -1,0 +1,49 @@
+.fade-active {
+  overflow-x: hidden;
+  .fadeIn * {
+    opacity: 0;
+    transition: opacity 1.2s ease, transform 1s ease;
+    transition-delay: var(--delay)
+  }
+  .fadeIn.up *,
+  .fadeIn .up {
+    transform: translate3d(0, 100px, 0)
+  }
+
+  @media (min-width: 782px) {
+    .fadeIn.right *,
+    .fadeIn .right {
+      transform: translate3d(150px, 0, 0)
+    }
+    .fadeIn.left *,
+    .fadeIn .left {
+      transform: translate3d(-150px, 0, 0)
+    }
+  }
+  .fadeIn.visible * {
+    transform: translate3d(0, 0, 0);
+    opacity: 1
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fadeIn * {
+      /* stylelint-disable-next-line declaration-no-important */
+      transform: none!important;
+      opacity: 1;
+      transition: none;
+      transition-delay: 0s
+    }
+  }
+  .delay025 {
+    --delay: .25s
+  }
+  .delay05 {
+    --delay: .5s
+  }
+  .delay075 {
+    --delay: .75s
+  }
+  .delay1 {
+    --delay: 1s
+  }
+}
