@@ -1,0 +1,47 @@
+.fade-active {
+  overflow-x: hidden;
+}
+.fade-active .fadeIn * {
+  opacity: 0;
+  transition: opacity 1.2s ease, transform 1s ease;
+  transition-delay: var(--delay);
+}
+.fade-active .fadeIn.up *,
+.fade-active .fadeIn .up {
+  transform: translate3d(0, 100px, 0);
+}
+@media (min-width: 782px) {
+  .fade-active .fadeIn.right *,
+.fade-active .fadeIn .right {
+    transform: translate3d(150px, 0, 0);
+  }
+  .fade-active .fadeIn.left *,
+.fade-active .fadeIn .left {
+    transform: translate3d(-150px, 0, 0);
+  }
+}
+.fade-active .fadeIn.visible * {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-active .fadeIn * {
+    /* stylelint-disable-next-line declaration-no-important */
+    transform: none !important;
+    opacity: 1;
+    transition: none;
+    transition-delay: 0s;
+  }
+}
+.fade-active .delay025 {
+  --delay: .25s ;
+}
+.fade-active .delay05 {
+  --delay: .5s ;
+}
+.fade-active .delay075 {
+  --delay: .75s ;
+}
+.fade-active .delay1 {
+  --delay: 1s ;
+}/*# sourceMappingURL=index.css.map */
