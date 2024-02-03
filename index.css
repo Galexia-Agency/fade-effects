@@ -12,11 +12,11 @@
 }
 @media (min-width: 782px) {
   .fade-active .fadeIn.right *,
-.fade-active .fadeIn .right {
+  .fade-active .fadeIn .right {
     transform: translate3d(150px, 0, 0);
   }
   .fade-active .fadeIn.left *,
-.fade-active .fadeIn .left {
+  .fade-active .fadeIn .left {
     transform: translate3d(-150px, 0, 0);
   }
 }
@@ -44,4 +44,4 @@
 }
 .fade-active .delay1 {
   --delay: 1s ;
-}/*# sourceMappingURL=index.css.map */
+}

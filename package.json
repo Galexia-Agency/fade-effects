@@ -7,18 +7,33 @@
         "lint:scripts": "eslint --ext .js,.vue --ignore-path .gitignore .",
         "fix:scripts": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
         "lint:styles": "stylelint \"styles/**/*\"",
-        "fix:styles": "stylelint \"styles/**/*\" --fix"
+        "fix:styles": "stylelint \"styles/**/*\" --fix",
+        "build:styles": "sass style.scss style.css",
+        "watch:styles": "sass --watch style.scss:style.css"
     },
     "devDependencies": {
         "eslint": "^8.56.0",
         "eslint-config-galexia": "https://github.com/Galexia-Agency/eslint-config",
+        "husky": "^9.0.10",
+        "lint-staged": "^15.2.1",
         "stylelint": "^15.11.0",
-        "stylelint-config-galexia": "https://github.com/Galexia-Agency/stylelint-config"
+        "stylelint-config-galexia": "https://github.com/Galexia-Agency/stylelint-config",
+        "sass": "^1.70.0"
     },
     "browserslist": [
         "last 5 versions and not ie <= 11 and > 0.2% and not dead and not op_mini all"
     ],
     "engines": {
         "node": "^18.12.0 || ^19.9.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.css": [
+          "npm run build:styles"
+        ]
     }
 }

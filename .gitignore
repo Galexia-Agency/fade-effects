@@ -1,7 +1,3 @@
-*.scss
-*.css.map
-!public/css/*
-
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
 # Logs
