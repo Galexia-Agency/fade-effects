@@ -104,3 +104,6 @@ sw.*
 # Composer
 vendor
 wordpress
+
+# Pre-commit
+.husky
