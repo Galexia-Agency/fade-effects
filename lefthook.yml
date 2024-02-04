@@ -1,0 +1,5 @@
+pre-commit:
+  parallel: true
+  commands:
+    build-css:
+      run: npm run build:styles && git add index.css index.css.map
