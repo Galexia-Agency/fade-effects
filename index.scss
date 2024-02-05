@@ -2,8 +2,8 @@
   overflow-x: hidden;
   .fadeIn * {
     opacity: 0;
-    transition: opacity 1.2s ease, transform 1s ease;
-    transition-delay: var(--delay)
+    transition: opacity var(--speed, 1.2s) ease, transform calc(var(--speed, 1.2s) - .2s) ease;
+    transition-delay: var(--delay, 0s)
   }
   .fadeIn.up *,
   .fadeIn .up {
