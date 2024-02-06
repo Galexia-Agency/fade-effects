@@ -2,4 +2,4 @@ pre-commit:
   parallel: true
   commands:
     build-css:
-      run: npm run build:styles && git add index.css index.css.map
+      run: npm run build:styles && git add dist/index.css dist/index.css.map && npm run build:scripts && git add dist/index.mjs dist/index.js
