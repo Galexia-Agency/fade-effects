@@ -19,9 +19,19 @@ window.addEventListener('load', () => {
   // We're now ready to show fade in effects, so add the class to the body
   document.body.classList.add('fade-active')
 
+  function isElementAboveTheFold (element) {
+    const rect = element.getBoundingClientRect()
+    const viewportHeight = window.innerHeight
+
+    // Check if the element's top is within the viewport
+    return rect.top < viewportHeight
+  }
+
   elems.forEach((e) => {
-    anims.push(e)
-    observer.observe(e) // Start observing each element
+    if (!isElementAboveTheFold(e)) {
+      anims.push(e)
+      observer.observe(e) // Start observing each element
+    }
   })
 
   function render () {
