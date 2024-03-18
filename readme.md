@@ -41,3 +41,7 @@ Or just add the files to the HTML
 * You can get the element to fade in a direction of your choosing by adding the `up`, `right`, and `left` classes. These classes can either be added to the element itself, or a child of the `fade-in` class. The `left` and `right` fade in classes will only be active on screens above 782px in width, otherwise they will fade in like normal.
 * You can add a delay to the fade, for example, if you want to stagger a heading and content load. There are some helper classes, `delay025`, `delay05`, `delay075`, and `delay1`. These classes are in seconds, so `delay025` is 0.25s. You can also set the `--delay` css variable on the element if you need a different delay duration.
 * You can adjust the speed of the fade effect by setting the `--speed` css variable. By default, the fade will take 1.2s.
+
+# Development
+
+Run `pnpm i && pnpm lefthook install` to set up your local development environment.
