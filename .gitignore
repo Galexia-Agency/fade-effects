@@ -107,3 +107,8 @@ wordpress
 
 # Pre-commit
 .husky
+
+# lock files
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
