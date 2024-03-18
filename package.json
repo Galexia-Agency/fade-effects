@@ -13,7 +13,7 @@
     "fix:styles": "stylelint \"styles/**/*\" --fix",
     "build:styles": "sass src/index.scss dist/index.css",
     "watch:styles": "sass --watch src/index.scss:dist/index.css",
-    "prepare": "lefthook install"
+    "postinstall": "lefthook install"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",
